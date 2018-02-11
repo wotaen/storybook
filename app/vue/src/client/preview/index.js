@@ -60,7 +60,14 @@ if (isBrowser) {
 }
 
 const clientApi = new ClientApi(context);
-export const { storiesOf, setAddon, addDecorator, clearDecorators, getStorybook } = clientApi;
+export const {
+  storiesOf,
+  setAddon,
+  addDecorator,
+  addOptions,
+  clearDecorators,
+  getStorybook,
+} = clientApi;
 
 const configApi = new ConfigApi({ ...context, clearDecorators });
 export const { configure } = configApi;
