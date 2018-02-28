@@ -55,7 +55,7 @@ export const imageSnapshot = ({
   testFn.beforeEach = () =>
     puppeteer
       // add some options "no-sandbox" to make it work properly on some Linux systems as proposed here: https://github.com/Googlechrome/puppeteer/issues/290#issuecomment-322851507
-      .launch({ args: ['--no-sandbox ', '--disable-setuid-sandbox'] })
+      .launch({execPath: '/usr/bin/chrome'})
       .then(b => {
         browser = b;
       })
